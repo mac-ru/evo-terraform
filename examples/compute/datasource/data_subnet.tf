@@ -23,7 +23,7 @@ data "cloudru_evolution_subnet" "subnets" {
 
 locals {
   demo_subnets = [
-    for s in data.cloudru_evolution_subnet.subnets.resources : s
+    for s in data.cloudru_evolution_subnet.subnets : s
   ]
 
   demo_subnet = local.demo_subnets.0
